@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== Style Sheet  ===============-->
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Travel Landing Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="logo">Travel</a>
+                <div class="nav_toggle" id="nav-toggle">
+                    <img src="images/menu.png" alt="">
+                </div>
+                <div class="nav_menu" id="nav-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Discover</a>
+                        </li>
+                        <li>
+                            <a href="#">Places</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                    </ul>
+                    <span class="nav_close" id="nav-close">&times;</span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="main-container container ">
+                    <div class="main-data">
+                        <span class="subtitle">Discover your place</span>
+                        <h1>Explore The <span class="h1-span"> Best Beautiful </span> Places
+                        </h1>
+                        <a href="#" class="btn">Explore</a>
+                    </div>
+                    <div class="main-icons">
+                        <img src=" images/facebook.png" alt="">
+                        <img src=" images/instagram.png" alt="">
+                        <img src=" images/twitter.png" alt="">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const navMenu = document.getElementById("nav-menu"),
+            navToggle = document.getElementById("nav-toggle"),
+            navClose = document.getElementById("nav-close");
+        /*===== MENU SHOW =====*/
+        if (navToggle) {
+            navToggle.addEventListener("click", () => {
+                navMenu.classList.add("show-menu");
+            });
+        }
+        /*===== MENU HIDDEN =====*/
+        if (navClose) {
+            navClose.addEventListener("click", () => {
+                navMenu.classList.remove("show-menu");
+            });
+        }
+    </script>
+</body>
+
+</html>

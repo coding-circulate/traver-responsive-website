@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    font-family: sans-serif;
+    background: url(images/img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #909090;
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0 3rem;
+}
+
+.nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.nav_toggle {
+    cursor: pointer;
+}
+
+.nav_menu {
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .nav_menu {
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+/* show menu */
+.show-menu {
+    right: 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+ul li {
+    padding: 0 1.6rem;
+    list-style: none;
+}
+
+ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 0;
+}
+
+li a:hover {
+    border-bottom: 3px solid #fff;
+    transition: 0.3s;
+}
+
+
+.nav_close {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav_toggle,
+.nav_close {
+    display: none;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 3rem;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.h1-span {
+    display: block;
+    color: #000;
+}
+
+.btn {
+    text-decoration: none;
+    background: #000;
+    border: 3px solid #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    transition: 0.5s;
+}
+
+.main-icons {
+    margin: 10px 0;
+}
+
+.main-icons img {
+    margin-right: 13px;
+}
+
+@media(max-width:991px) {
+
+    .nav_toggle,
+    .nav_close {
+        display: block;
+    }
+
+    ul {
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+}
+
+@media (max-width: 530px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
